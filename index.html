@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Hero Search</title>
+</head>
+
+<body>
+
+    <body class="flex-column min-100-vh">
+        <header class="hero">
+            <h1 class="app-title"><i class="fab fa-marvel"></i> Hero Search</h1>
+            <p>Search for a Marvel character to find awesome Information!
+            </p>
+        </header>
+
+
+        <main class="flex-row justify-space-between">
+            <div class="col-12 col-md-4">
+
+                <div class="card">
+                    <h3 class="card-header text-uppercase">Search By Hero</h3>
+                    <form id="character-form" class="card-body">
+                        <label class="form-label" for="character">Hero Name</label>
+                        <input name="character" id="character" type="text" autofocus="true" class="form-input" />
+                        <button type="submit" class="btn">Get Hero</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+                <h2 class="subtitle">Hero Information: <span id="pokemon-search"></span></h2>
+                <div id="character-container" class="list-group">
+
+
+                </div>
+            </div>
+        </main>
+        <!-- <h1>Marvel Hero Search</h1> -->
+
+
+
+
+
+        <script src="index.js"></script>
+
+    </body>
+
+</html>
