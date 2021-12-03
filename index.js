@@ -13,6 +13,7 @@ var formSubmitHandler = function (event) {
     // get value from input element
     pokemonSearch = nameInputEl.value.trim();
     if (pokemonSearch) {
+        tradingCard.innerHTML = "";
         getPokemon(pokemonSearch);
         // clear old content
         characterContainerEl.textContent = '';
