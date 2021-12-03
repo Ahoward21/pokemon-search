@@ -56,16 +56,16 @@ var displayPokemon = function (poke, searchTerm) {
     characterContainerEl.appendChild(pokemonName)
 
     for (var i = 0; i < poke.stats.length; i++) {
-        
+
         var statsEl = document.createElement('div');
-        
+
         statsEl.textContent = `${poke.stats[i].stat.name}: ${poke.stats[i].base_stat}`;
 
-        
-         
-         characterContainerEl.appendChild(statsEl)
 
-        
+
+        characterContainerEl.appendChild(statsEl)
+
+
     }
     pokeCard()
 }
@@ -97,8 +97,8 @@ var pokeCard = function (cards) {
 
 var displayCard = function (cardImg) {
     //for (var i = 0; i < cardImg.length; i++) {
-      //  console.log("this ran")
-        //console.log(cardImg[i])
+    //  console.log("this ran")
+    //console.log(cardImg[i])
 
     // }
     console.log(cardImg[0])
