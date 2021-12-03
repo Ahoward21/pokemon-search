@@ -1,9 +1,11 @@
 var charactersEl = document.getElementById('characters');
-var publicKey = "e140afae-ca63-4ba4-b4ef-3ef664f9e105";
+var publicKey = "7debcfe3-0404-4f51-b968-3b753a387c92";
 var userFormEl = document.querySelector('#character-form');
 var nameInputEl = document.querySelector('#character');
 var characterContainerEl = document.querySelector('#character-container');
 var pokemonSearchTerm = document.querySelector('#pokemon-search');
+var pokemonSearch = "";
+
 
 /// -------------
 var formSubmitHandler = function (event) {
@@ -11,7 +13,7 @@ var formSubmitHandler = function (event) {
     event.preventDefault();
 
     // get value from input element
-    var pokemonSearch = nameInputEl.value.trim();
+    pokemonSearch = nameInputEl.value.trim();
 
     if (pokemonSearch) {
         getPokemon(pokemonSearch);
@@ -37,7 +39,7 @@ var getPokemon = function (pokemon) {
                     console.log(data);
                     displayPokemon(data, pokemon);
                 });
-            
+
             } else {
                 alert('Error: ' + response.statusText);
             }
@@ -45,45 +47,67 @@ var getPokemon = function (pokemon) {
         .catch(function (error) {
             console.log('Unable to connect to to pokemon');
         });
-        
+
 };
 
-var displayPokemon = function(poke, searchTerm) {
+var displayPokemon = function (poke, searchTerm) {
+    var pokemonName = document.createElement('span');
+    pokemonName.textContent = (searchTerm)
+    characterContainerEl.appendChild(pokemonName)
+
     for (var i = 0; i < poke.stats.length; i++) {
-        var statsEl = document.createElement('div')
-        statsEl.textContent = `${poke.stats[i].stat.name}: ${poke.stats[i].base_stat}`
         
+        var statsEl = document.createElement('div');
         
+        statsEl.textContent = `${poke.stats[i].stat.name}: ${poke.stats[i].base_stat}`;
 
-        document.getElementById('character-container').appendChild(statsEl)
         
+         
+         characterContainerEl.appendChild(statsEl)
 
-    } 
+        
+    }
+    pokeCard()
 }
 
 
-  //// -------------------------------------------------------------
+//// -------------------------------------------------------------
 
 var pokeCard = function (cards) {
-    var cardApi = 'https://api.pokemontcg.io/v2/cards';
+    var cardApi = 'https://api.pokemontcg.io/v2/cards?q=name:' + pokemonSearch;
 
-fetch(cardApi)
-    .then(function (response) {
-        // request was successful
-        if (response.ok) {
-            console.log(response);
-            response.json().then(function (data) {
-                console.log(data);
-                displayPokemon(data, user);
-            });
-        } else {
-            alert('Error: ' + response.statusText);
-        }
-    })
-    .catch(function (error) {
-        alert('Unable to connect to GitHub');
-    });
+    fetch(cardApi)
+        .then(function (response) {
+            // request was successful
+            if (response.ok) {
+                console.log('card API called')
+                console.log(response);
+                response.json().then(function (card) {
+                    console.log("this is the card", card);
+                    return displayCard(card.data);
+                });
+            } else {
+                console.log('Else triggered: ' + response.statusText);
+            }
+        })
+        .catch(function (error) {
+            console.log('Unable to bring up pokemon card');
+        });
 };
+
+var displayCard = function (cardImg) {
+    //for (var i = 0; i < cardImg.length; i++) {
+      //  console.log("this ran")
+        //console.log(cardImg[i])
+
+    // }
+    console.log(cardImg[0])
+
+
+}
+
+
 
 // add event listeners to forms
 userFormEl.addEventListener('submit', formSubmitHandler);
+;
