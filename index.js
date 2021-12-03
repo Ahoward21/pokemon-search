@@ -93,7 +93,7 @@ var pokeCard = function (cards) {
         })
         .catch(function (error) {
             console.log('Unable to bring up pokemon card');
-            
+
         });
 };
 
@@ -118,4 +118,3 @@ var displayCard = function (cardImg) {
 
 // add event listeners to forms
 userFormEl.addEventListener('submit', formSubmitHandler);
-;
