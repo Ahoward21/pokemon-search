@@ -18,7 +18,7 @@ var formSubmitHandler = function (event) {
         characterContainerEl.textContent = '';
         nameInputEl.value = '';
     } else {
-        // alert('Please enter pokemon');
+        // alert('Please enter pokemon'); 
     }
 };
 ///// ---------------------------------------------------------------
@@ -71,6 +71,7 @@ var pokeCard = function (cards) {
         })
         .catch(function (error) {
             console.log('Unable to bring up pokemon card');
+            
         });
 };
 var displayCard = function (cardImg) {
