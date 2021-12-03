@@ -103,7 +103,10 @@ var displayCard = function (cardImg) {
     // }
     console.log(cardImg[0])
 
+
 }
+
+
 
 // add event listeners to forms
 userFormEl.addEventListener('submit', formSubmitHandler);
