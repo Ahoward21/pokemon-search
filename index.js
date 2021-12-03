@@ -5,6 +5,7 @@ var nameInputEl = document.querySelector('#character');
 var characterContainerEl = document.querySelector('#character-container');
 var pokemonSearchTerm = document.querySelector('#pokemon-search');
 var pokemonSearch = "";
+var tradingCard = document.querySelector('#trading-card-container')
 
 
 /// -------------
@@ -22,7 +23,7 @@ var formSubmitHandler = function (event) {
         characterContainerEl.textContent = '';
         nameInputEl.value = '';
     } else {
-        alert('Please enter pokemon');
+        // alert('Please enter pokemon'); 
     }
 };
 ///// ---------------------------------------------------------------
@@ -56,16 +57,16 @@ var displayPokemon = function (poke, searchTerm) {
     characterContainerEl.appendChild(pokemonName)
 
     for (var i = 0; i < poke.stats.length; i++) {
-        
+
         var statsEl = document.createElement('div');
-        
+
         statsEl.textContent = `${poke.stats[i].stat.name}: ${poke.stats[i].base_stat}`;
 
-        
-         
-         characterContainerEl.appendChild(statsEl)
 
-        
+
+        characterContainerEl.appendChild(statsEl)
+
+
     }
     pokeCard()
 }
@@ -92,19 +93,28 @@ var pokeCard = function (cards) {
         })
         .catch(function (error) {
             console.log('Unable to bring up pokemon card');
+
         });
 };
 
 var displayCard = function (cardImg) {
     //for (var i = 0; i < cardImg.length; i++) {
-      //  console.log("this ran")
-        //console.log(cardImg[i])
+    console.log("this ran")
+    console.log("card img", cardImg[0].images.large)
 
     // }
+
+    var pokeCardImg = document.createElement('img');
+    pokeCardImg.src = (cardImg[0].images.large);
+    tradingCard.appendChild(pokeCardImg);
     console.log(cardImg[0])
+
+    /// create a href for link to image 
+    /// 
 
 }
 
+
+
 // add event listeners to forms
 userFormEl.addEventListener('submit', formSubmitHandler);
-;
