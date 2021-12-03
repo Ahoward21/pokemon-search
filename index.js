@@ -5,6 +5,7 @@ var nameInputEl = document.querySelector('#character');
 var characterContainerEl = document.querySelector('#character-container');
 var pokemonSearchTerm = document.querySelector('#pokemon-search');
 var pokemonSearch = "";
+var tradingCard = document.querySelector('#trading-card-container')
 
 
 /// -------------
@@ -22,7 +23,7 @@ var formSubmitHandler = function (event) {
         characterContainerEl.textContent = '';
         nameInputEl.value = '';
     } else {
-        alert('Please enter pokemon');
+        // alert('Please enter pokemon'); 
     }
 };
 ///// ---------------------------------------------------------------
@@ -92,17 +93,24 @@ var pokeCard = function (cards) {
         })
         .catch(function (error) {
             console.log('Unable to bring up pokemon card');
+            
         });
 };
 
 var displayCard = function (cardImg) {
     //for (var i = 0; i < cardImg.length; i++) {
-    //  console.log("this ran")
-    //console.log(cardImg[i])
+    console.log("this ran")
+    console.log("card img", cardImg[0].images.large)
 
     // }
+
+    var pokeCardImg = document.createElement('img');
+    pokeCardImg.src = (cardImg[0].images.large);
+    tradingCard.appendChild(pokeCardImg);
     console.log(cardImg[0])
 
+    /// create a href for link to image 
+    /// 
 
 }
 
