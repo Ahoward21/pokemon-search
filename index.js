@@ -6,6 +6,8 @@ var characterContainerEl = document.querySelector('#character-container');
 var pokemonSearchTerm = document.querySelector('#pokemon-search');
 var pokemonSearch = "";
 var tradingCard = document.querySelector('#trading-card-container')
+var pokemonId
+var pokemonName 
 /// -------------
 var formSubmitHandler = function (event) {
     // prevent page from refreshing
@@ -32,7 +34,11 @@ var getPokemon = function (pokemon) {
                 console.log("Poke API called");
                 response.json().then(function (data) {
                     console.log(data);
+                    pokemonId = data.id
+                    pokemonName = data.name
+                    console.log(pokemonId, pokemonName)
                     displayPokemon(data, pokemon);
+                    savedCard()
                 });
             } else {
                 alert('Error: ' + response.statusText);
@@ -78,14 +84,20 @@ var pokeCard = function (cards) {
 var displayCard = function (cardImg) {
     //for (var i = 0; i < cardImg.length; i++) {
     console.log("this ran")
-    console.log("card img", cardImg[0].images.large)
+    console.log("card img", cardImg[2].images.large)
     // }
     var pokeCardImg = document.createElement('img');
-    pokeCardImg.src = (cardImg[0].images.large);
+    pokeCardImg.src = (cardImg[2].images.large);
     tradingCard.appendChild(pokeCardImg);
-    console.log(cardImg[0])
+    console.log(cardImg[2])
     /// create a href for link to image
     ///
 }
+
+var savedCard = function () {
+    localStorage.setItem(pokemonName, pokemonId);
+}
+
+ 
 // add event listeners to forms
 userFormEl.addEventListener('submit', formSubmitHandler);
