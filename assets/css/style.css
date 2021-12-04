@@ -45,6 +45,25 @@
     color: black;
     
   }
+
+  .pokeball-search {
+    background-image: url("../images/pokeball.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 450px !important;
+    width: 450px !important;
+  }
+
+  .search-btn-shape {
+    height: 130px !important;
+    width: 130px !important;
+    margin: auto;
+    margin-top: 15px !important;
+  }
+
+  .search-card {
+    background: transparent !important;
+  }
   
    .btn {
     font-size: 1.3rem;
@@ -98,9 +117,10 @@
   
   .hero {
     padding: 3% 4%;
-    background-image: url(https://i.annihil.us/u/prod/misc/marvel.svg);
+    background-image: url(https://i.imgur.com/SEdZSMe.png);
     background-color: var(--dark);
     color: var(--primary);
+    height: 180px;
   }
   
   .hero p {

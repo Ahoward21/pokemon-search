@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Hero Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Pokemon Search</title>
 </head>
 
 <body>
@@ -22,22 +23,24 @@
 
 
         <main class="flex-row justify-space-between">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 pokeball-search rounded-circle">
 
-                <div class="card">
-                    <h3 class="card-header text-uppercase">Search By Pokemon</h3>
-                    <form id="character-form" class="card-body">
+                <div class="search-card">
+                    <h3 class="text-uppercase text-center search-pokemon">Search By Pokemon</h3>
+                    <form id="character-form" class="d-flex align-items-center flex-column">
                         <label class="form-label" for="character">Pokemon Name</label>
                         <input name="character" id="character" type="text" autofocus="true" class="form-input" />
-                        <button type="submit" class="btn">Get Pokemon</button>
+                        <button type="submit" class="btn rounded-circle search-btn-shape">Get Pokemon</button>
                     </form>
                 </div>
             </div>
 
-            <div class="col-12 col-md-8">
-                <h2 class="subtitle">Pokemon Information: <span id="pokemon-search"></span></h2>
-                <div id="character-container" class="list-group"></div>
-                <div id="trading-card-container" class="list-group" > </div>
+            <div class="col-12 col-md-8 d-flex p-4 pt-0">
+                <div class="col-4 p-4 pt-0">
+                    <h2 class="subtitle">Pokemon Information: <span id="pokemon-search"></span></h2>   
+                    <div id="character-container" class="list-group"></div>
+                </div>
+                <div id="trading-card-container" class="col-8 list-group" > </div>
 
 
             </div>
