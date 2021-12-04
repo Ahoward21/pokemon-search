@@ -5,9 +5,11 @@ var nameInputEl = document.querySelector('#character');
 var characterContainerEl = document.querySelector('#character-container');
 var pokemonSearchTerm = document.querySelector('#pokemon-search');
 var pokemonSearch = "";
-var tradingCard = document.querySelector('#trading-card-container')
+var tradingCard = document.querySelector('#trading-card-container');
 var pokemonId
-var pokemonName 
+var pokemonName
+var saveButton = document.querySelector('#save-card');
+var viewDeck = document.querySelector('#view-saved-cards');
 /// -------------
 var formSubmitHandler = function (event) {
     // prevent page from refreshing
