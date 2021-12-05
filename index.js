@@ -84,6 +84,9 @@ var pokeCard = function (cards) {
 
         });
 };
+
+let pokemonInfo;
+
 var displayCard = function (cardImg) {
     //for (var i = 0; i < cardImg.length; i++) {
     console.log("card img", cardImg[0].images.large)
@@ -91,17 +94,28 @@ var displayCard = function (cardImg) {
     var pokeCardImg = document.createElement('img');
     pokeCardImg.src = (cardImg[0].images.large);
     tradingCard.appendChild(pokeCardImg);
+
+    pokemonInfo = {
+        id: cardImg[0].id,
+        name: cardImg[0].name,
+        imageUrl: cardImg[0].images.large
+    }
+
     console.log(cardImg[0])
-    saveButton(cardImg[0].images.large)
+
     /// create a href for link to image
     ///
 }
 
-var saveButton = function (cardImg) {
-    document.getElementById("save-card").addEventListener("click", function() {
-    localStorage.setItem(pokemonName, cardImg);
-    });
-    
+var saveButton = function (pokemonInfo) {
+    const existingPokemon = JSON.parse(localStorage.getItem("pokemonDeck")) || [];
+
+    // make sure that we don't add any duplicate cards to the page where we view all saved cards
+    const existingCard = existingPokemon.find(currentPokemon => currentPokemon.id === pokemonInfo.id);
+    if (existingCard) { return;}
+    existingPokemon.push(pokemonInfo);
+    localStorage.setItem("pokemonDeck", JSON.stringify(existingPokemon));
+
 }
 
 // view deck button
@@ -112,3 +126,5 @@ viewDeck.addEventListener("click", function () {
  
 // add event listeners to forms
 userFormEl.addEventListener('submit', formSubmitHandler);
+
+document.getElementById("save-card").addEventListener("click", function(){saveButton(pokemonInfo)});
