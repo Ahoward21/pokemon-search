@@ -91,15 +91,24 @@ var displayCard = function (cardImg) {
     var pokeCardImg = document.createElement('img');
     pokeCardImg.src = (cardImg[0].images.large);
     tradingCard.appendChild(pokeCardImg);
+
+    const pokemonInfo = {
+        id: cardImg[0].id,
+        name: cardImg[0].name,
+        imageUrl: cardImg[0].images.large
+    }
+
     console.log(cardImg[0])
-    saveButton(cardImg[0].images.large)
+    saveButton(pokemonInfo);
     /// create a href for link to image
     ///
 }
 
-var saveButton = function (cardImg) {
+var saveButton = function (pokemonInfo) {
     document.getElementById("save-card").addEventListener("click", function() {
-    localStorage.setItem(pokemonName, cardImg);
+        const existingPokemon = JSON.parse(localStorage.getItem("pokemonDeck")) || [];
+        existingPokemon.push(pokemonInfo);
+        localStorage.setItem("pokemonDeck", JSON.stringify(existingPokemon));
     });
     
 }
