@@ -8,6 +8,7 @@ var pokemonSearch = "";
 var tradingCard = document.querySelector('#trading-card-container');
 var pokemonId
 var pokemonName
+var gameCard
 var saveButton = document.querySelector('#save-card');
 var viewDeck = document.querySelector('#view-saved-cards');
 /// -------------
@@ -36,11 +37,8 @@ var getPokemon = function (pokemon) {
                 console.log("Poke API called");
                 response.json().then(function (data) {
                     console.log(data);
-                    pokemonId = data.id
-                    pokemonName = data.name
-                    console.log(pokemonId, pokemonName)
                     displayPokemon(data, pokemon);
-                    savedCard()
+                    
                 });
             } else {
                 alert('Error: ' + response.statusText);
@@ -71,7 +69,10 @@ var pokeCard = function (cards) {
                 console.log('card API called')
                 console.log(response);
                 response.json().then(function (card) {
-                    console.log("this is the card", card);
+                    pokemonId = card.data[0].id
+                    pokemonName = card.data[0].name
+                    console.log(pokemonId, pokemonName)
+                    console.log("this is the card", card.data[0].id);
                     return displayCard(card.data);
                 });
             } else {
@@ -85,19 +86,22 @@ var pokeCard = function (cards) {
 };
 var displayCard = function (cardImg) {
     //for (var i = 0; i < cardImg.length; i++) {
-    console.log("this ran")
-    console.log("card img", cardImg[2].images.large)
+    console.log("card img", cardImg[0].images.large)
     // }
     var pokeCardImg = document.createElement('img');
-    pokeCardImg.src = (cardImg[2].images.large);
+    pokeCardImg.src = (cardImg[0].images.large);
     tradingCard.appendChild(pokeCardImg);
-    console.log(cardImg[2])
+    console.log(cardImg[0])
+    saveButton()
     /// create a href for link to image
     ///
 }
 
-var savedCard = function () {
+var saveButton = function () {
+    document.getElementById("save-card").addEventListener("click", function() {
     localStorage.setItem(pokemonName, pokemonId);
+    });
+    
 }
 
  
