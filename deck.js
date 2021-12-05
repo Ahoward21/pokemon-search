@@ -28,8 +28,8 @@ var goBack = document.getElementById("go-back");
 
 //access local storage to pull card img
 var getCards = function () {
-    var localValues = JSON.stringify(localStorage.getItem())
-    console.log();
+    var localValues = JSON.stringify(localStorage.getItem(names));
+    console.log(names);
     
 }
 
@@ -42,5 +42,5 @@ goBack.addEventListener("click", function () {
 
 // clear deck button 
 getCards();
-pokeCard()
+
 
