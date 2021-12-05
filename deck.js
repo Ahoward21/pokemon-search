@@ -1,8 +1,21 @@
 //declare variables
+var deckContainer = document.getElementById("trading-card-container");
+var pokemonName
+var pokemonId
+var pokemonSearch = "";
+
+var goBack = document.getElementById("go-back");
 
 //access local storage to pull card img
+var getCards = function (){
+    var localValues = JSON.stringify(localStorage.getItem(pokemonId))
+    console.log(pokemonId);
+    
+}
+
+
 var pokeCard = function (cards) {
-    var cardApi = 'https://api.pokemontcg.io/v2/cards?q=name:' + pokemonSearch;
+    var cardApi = 'https://api.pokemontcg.io/v2/cards/' + pokemonId;
     fetch(cardApi)
         .then(function (response) {
             // request was successful
@@ -36,7 +49,14 @@ var displayCard = function (cardImg) {
     saveButton();
 }
 
-// go back button
+
+
+// Go back button
+goBack.addEventListener("click", function () {
+    window.location.replace("./index.html");
+});
 
 // clear deck button 
-pokeCard();
+getCards();
+pokeCard()
+

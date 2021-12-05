@@ -104,6 +104,11 @@ var saveButton = function () {
     
 }
 
+// view deck button
+viewDeck.addEventListener("click", function () {
+    window.location.replace("./deck.html");
+});
+
  
 // add event listeners to forms
 userFormEl.addEventListener('submit', formSubmitHandler);
