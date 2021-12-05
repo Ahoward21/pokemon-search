@@ -2,22 +2,11 @@
 var deckContainer = document.getElementById("trading-card-container");
 var names = []
 
-const pokemon = [
-    {
-        id: 1,
-        imageUrl: "#"
-    },
-    {
-        id: 2,
-        imageUrl: "#"
-    }
-];
+const existingPokemon = JSON.parse(localStorage.getItem("pokemonDeck")) || [];
 
-localStorage.getItem
-
-for (let i = 0; i < pokemon.length; i++) {
-    const pokemon = pokemon[index];
-    const container = document.querySelector("trading-card-container")
+for (let i = 0; i < existingPokemon.length; i++) {
+    const pokemon = existingPokemon[i];
+    const container = document.querySelector("#trading-card-container");
     const image = document.createElement("img");
     image.src = pokemon.imageUrl
     container.appendChild(image)
