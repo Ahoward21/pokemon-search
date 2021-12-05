@@ -92,17 +92,22 @@ var displayCard = function (cardImg) {
     pokeCardImg.src = (cardImg[0].images.large);
     tradingCard.appendChild(pokeCardImg);
     console.log(cardImg[0])
-    saveButton()
+    saveButton(cardImg[0].images.large)
     /// create a href for link to image
     ///
 }
 
-var saveButton = function () {
+var saveButton = function (cardImg) {
     document.getElementById("save-card").addEventListener("click", function() {
-    localStorage.setItem(pokemonName, pokemonId);
+    localStorage.setItem(pokemonName, cardImg);
     });
     
 }
+
+// view deck button
+viewDeck.addEventListener("click", function () {
+    window.location.replace("./deck.html");
+});
 
  
 // add event listeners to forms
