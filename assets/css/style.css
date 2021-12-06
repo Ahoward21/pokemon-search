@@ -526,4 +526,7 @@
   }
   
   
-  
+  #trading-card-container {
+    display: flex;
+    flex: wrap;
+  }

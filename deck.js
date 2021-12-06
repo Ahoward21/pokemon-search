@@ -8,12 +8,13 @@ for (let i = 0; i < existingPokemon.length; i++) {
     const pokemon = existingPokemon[i];
     const container = document.querySelector("#trading-card-container");
     const image = document.createElement("img");
+        image.setAttribute("display", "flex-wrap");
+        //image.setAttribute("width", "25%");
     image.src = pokemon.imageUrl
     container.appendChild(image)
     
 }
 
-var goBack = document.getElementById("go-back");
 
 //access local storage to pull card img
 var getCards = function () {
@@ -25,6 +26,8 @@ var getCards = function () {
 
 
 // Go back button
+var goBack = document.getElementById("go-back");
+
 goBack.addEventListener("click", function () {
     window.location.replace("./index.html");
 });
