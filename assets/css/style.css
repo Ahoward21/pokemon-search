@@ -43,7 +43,6 @@
     font-size: 1.5rem;
     font-weight: bolder;
     color: black;
-    
   }
 
   .pokeball-search {
@@ -52,6 +51,7 @@
     background-size: cover;
     height: 450px !important;
     width: 450px !important;
+    
   }
 
   .search-btn-shape {
@@ -59,11 +59,22 @@
     width: 130px !important;
     margin: auto;
     margin-top: 15px !important;
+    font-weight: bold !important;
   }
 
   .search-card {
     background: transparent !important;
   }
+
+  .search-card h3 {
+    background-color: rgba(0, 0, 255, 0.63);
+    color: yellow !important;
+    position: relative !important;
+  }
+
+  /* #character-form {
+    margin-top: 100px !important;
+  } */
   
    .btn {
     font-size: 1.3rem;
@@ -124,17 +135,24 @@
   }
   
   .hero p {
-    max-width: 100%;
+    max-width: 700px;
+    color: rgb(37, 37, 37);
+    background-color: rgba(228, 214, 152, 0.664);
+    margin-top: 10px;
+    margin-bottom: 25px;
+    /* rgb(43, 43, 231) */
   }
   
   .app-title {
     font-size: 3rem;
-    background-color: var(--primary);
+    background-color: rgb(228, 214, 152);
     color: var(--dark);
+    border-color: var(--dark);
     padding: 0 10px;
     display: inline-block;
     border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--light-dark);
+    box-shadow: 6px 5px rgb(214, 8, 8);
+    /* rgb(214, 8, 8) */
   }
   
   .list-group {
@@ -198,15 +216,16 @@
   .form-label {
     font-size: 1.1rem;
     margin: 0 0 0 5px;
+    font-weight: bold;
   }
   
   .form-input {
     width: 35%;
-    padding: 3%;
     margin: 5px 0;
     font-size: 1.2rem;
     border: 2px solid var(--light-dark);
     border-radius: var(--border-radius);
+    margin-bottom: 30px;
   }
   
   /* HEIGHT / WIDTH UTILS */
