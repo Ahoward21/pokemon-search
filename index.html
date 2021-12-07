@@ -17,14 +17,14 @@
     <body class="flex-column min-100-vh">
         <header class="hero">
             <h1 class="app-title"><i class="fab fa-marvel"></i> Poké-Find</h1>
-            <p>Search for a Pokémon character to find awesome Information!
+            <p>Search for a Pokémon Character to Find Awesome Information!
             </p>
         </header>
-
-
+        
+        
         <main class="flex-row justify-space-between">
-            <div class="col-12 col-md-4 pokeball-search rounded-circle">
-
+            <div class="col-12 col-md-4 col-sm-12 pokeball-search rounded-circle mt-4">
+                
                 <div class="search-card">
                     <h3 class="text-uppercase text-center search-pokemon">Search By Pokémon</h3>
                     <form id="character-form" class="d-flex align-items-center flex-column">
@@ -37,12 +37,12 @@
 
             <div class="col-12 col-md-8 d-flex p-4 pt-0">
                 <div class="col-4 p-4 pt-0">
-                    <h2 class="subtitle">Pokémon Information: <span id="pokemon-search"></span></h2>   
+                    <h2 class="subtitle col-12 col-xl-6 col-lg-4 col-md-6 col-sm-12 justify-space-around">Pokémon Information: <span id="pokemon-search"></span></h2>   
                     <div id="character-container" class="list-group"></div>
-                    <button class="btn btn-primary rounded" type="button" id="save-card">Save Card</button>
-                    <button class="btn btn-primary rounded" type="button" id="view-saved-cards">View Saved Cards</button>
+                    <button class="btn btn-primary rounded col-12 col-md-8 col-sm-12" type="button" id="save-card">Save Card</button>
+                    <button class="btn btn-primary rounded col-12 col-md-8 col-sm-12" type="button" id="view-saved-cards">View Saved Cards</button>
                 </div>
-                <div id="trading-card-container" class="col-8 list-group"></div>              
+                <div id="trading-card-container" class="col-8 col-xl-6 list-group justify-space-evenly"></div>              
             </div>
             
         </main>
