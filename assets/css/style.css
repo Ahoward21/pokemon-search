@@ -341,6 +341,10 @@
       margin-top: -15px !important;
     }
 
+    .poke-info-card {
+      justify-content: center;
+    }
+
     .col-sm-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
@@ -392,7 +396,13 @@
   
   
   /* col-md */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1030px) {
+
+    .poke-info-card {
+      justify-content: center;
+      padding-left: 50px;
+    }
+
     .col-md-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
