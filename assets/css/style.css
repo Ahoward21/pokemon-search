@@ -72,6 +72,18 @@
     position: relative !important;
   }
 
+  .card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  #card-img {
+    border:  5px solid blue;
+    
+  }
+
   /* #character-form {
     margin-top: 100px !important;
   } */
@@ -312,7 +324,24 @@
   }
   
   /* col-sm */
-  @media screen and (min-width: 640px) {
+  @media screen and (max-width: 640px) {
+
+    #card-img {
+      width: 200px;
+    }
+
+    .pokeball-search {
+      height: 350px !important;
+      width: 350px !important;
+    }
+  
+    .search-btn-shape {
+      height: 100px !important;
+      width: 100px !important;
+      margin: auto;
+      margin-top: -15px !important;
+    }
+
     .col-sm-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
@@ -364,7 +393,7 @@
   
   
   /* col-md */
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     .col-md-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
@@ -415,7 +444,7 @@
   }
   
   /* col-lg */
-  @media screen and (min-width: 992px) {
+  @media screen and (max-width: 992px) {
     .col-lg-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
@@ -466,7 +495,7 @@
   }
   
   /* col-xl */
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     .col-xl-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }

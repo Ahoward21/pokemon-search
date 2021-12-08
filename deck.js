@@ -8,8 +8,7 @@ for (let i = 0; i < existingPokemon.length; i++) {
     const pokemon = existingPokemon[i];
     const container = document.querySelector("#trading-card-container");
     const image = document.createElement("img");
-        image.setAttribute("display", "flex-wrap");
-        //image.setAttribute("width", "25%");
+        image.setAttribute("id", "card-img");
     image.src = pokemon.imageUrl
     container.appendChild(image)
     
@@ -33,6 +32,14 @@ goBack.addEventListener("click", function () {
 });
 
 // clear deck button 
+
+var clearDeck = document.getElementById("clear-deck");
+
+clearDeck.addEventListener("click", function() {
+    localStorage.clear("pokdemonDeck");
+    window.location.reload();
+});
+
 getCards();
 
 
