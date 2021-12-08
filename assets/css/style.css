@@ -342,7 +342,26 @@
     }
 
     .poke-info-card {
+      justify-content: space-evenly;
+    }
+
+    #trading-card-container {
       justify-content: center;
+      align-items: center;
+    }
+
+    #save-card {
+      height: 60px;
+      width: 60px;
+    }
+
+    #view-saved-cards {
+      height: 80px;
+      width: 65px;
+    }
+
+    .hero p {
+      font-size: 20px;
     }
 
     .col-sm-1 {
