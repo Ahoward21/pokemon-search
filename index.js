@@ -16,7 +16,7 @@ var formSubmitHandler = function (event) {
     // prevent page from refreshing
     event.preventDefault();
     // get value from input element
-    pokemonSearch = nameInputEl.value.trim();z
+    pokemonSearch = nameInputEl.value.trim();
     if (pokemonSearch) {
         tradingCard.innerHTML = "";
         getPokemon(pokemonSearch);
