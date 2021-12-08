@@ -43,7 +43,6 @@
     font-size: 1.5rem;
     font-weight: bolder;
     color: black;
-    
   }
 
   .pokeball-search {
@@ -52,6 +51,7 @@
     background-size: cover;
     height: 450px !important;
     width: 450px !important;
+    
   }
 
   .search-btn-shape {
@@ -59,11 +59,34 @@
     width: 130px !important;
     margin: auto;
     margin-top: 15px !important;
+    font-weight: bold !important;
   }
 
   .search-card {
     background: transparent !important;
   }
+
+  .search-card h3 {
+    background-color: rgba(0, 0, 255, 0.63);
+    color: yellow !important;
+    position: relative !important;
+  }
+
+  .card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  #card-img {
+    border:  5px solid blue;
+    
+  }
+
+  /* #character-form {
+    margin-top: 100px !important;
+  } */
   
    .btn {
     font-size: 1.3rem;
@@ -124,50 +147,29 @@
   }
   
   .hero p {
-    max-width: 100%;
+    max-width: 700px;
+    color: rgb(37, 37, 37);
+    background-color: rgba(228, 214, 152, 0.664);
+    margin-top: 10px;
+    margin-bottom: 25px;
+    /* rgb(43, 43, 231) */
   }
   
   .app-title {
     font-size: 3rem;
-    background-color: var(--primary);
+    background-color: rgb(228, 214, 152);
     color: var(--dark);
+    border-color: var(--dark);
     padding: 0 10px;
     display: inline-block;
     border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--light-dark);
+    box-shadow: 6px 5px rgb(214, 8, 8);
+    /* rgb(214, 8, 8) */
   }
   
   .list-group {
     padding: 0;
     list-style: none;
-  }
-  
-  .list-item {
-    margin-bottom: 10px;
-    padding: 1.5%;
-    border-radius: var(--border-radius);
-    background-color: var(--light-dark);
-    color: var(--primary);
-    text-decoration: none;
-  }
-  
-  .list-item:hover {
-    background-color: var(--dark);
-  }
-  
-  .status-icon {
-    padding: 2px 5px;
-    margin: 0 5px;
-    background-color: rgba(255,255,255, 1);
-    border-radius: var(--border-radius);
-  }
-  
-  .icon-danger {
-    color: rgb(255, 70, 70);
-  }
-  
-  .icon-success {
-    color: rgb(29, 153, 255);
   }
   
   /* CARDS */
@@ -198,15 +200,16 @@
   .form-label {
     font-size: 1.1rem;
     margin: 0 0 0 5px;
+    font-weight: bold;
   }
   
   .form-input {
     width: 35%;
-    padding: 3%;
     margin: 5px 0;
     font-size: 1.2rem;
     border: 2px solid var(--light-dark);
     border-radius: var(--border-radius);
+    margin-bottom: 30px;
   }
   
   /* HEIGHT / WIDTH UTILS */
@@ -321,7 +324,24 @@
   }
   
   /* col-sm */
-  @media screen and (min-width: 640px) {
+  @media screen and (max-width: 640px) {
+
+    #card-img {
+      width: 200px;
+    }
+
+    .pokeball-search {
+      height: 350px !important;
+      width: 350px !important;
+    }
+  
+    .search-btn-shape {
+      height: 100px !important;
+      width: 100px !important;
+      margin: auto;
+      margin-top: -15px !important;
+    }
+
     .col-sm-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
@@ -373,7 +393,7 @@
   
   
   /* col-md */
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     .col-md-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
@@ -424,7 +444,7 @@
   }
   
   /* col-lg */
-  @media screen and (min-width: 992px) {
+  @media screen and (max-width: 992px) {
     .col-lg-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
@@ -475,7 +495,7 @@
   }
   
   /* col-xl */
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     .col-xl-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
