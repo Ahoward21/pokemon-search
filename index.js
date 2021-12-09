@@ -19,7 +19,7 @@ var formSubmitHandler = function (event) {
     pokemonSearch = nameInputEl.value.trim();
     if (pokemonSearch) {
         tradingCard.innerHTML = "";
-        getPokemon(pokemonSearch);
+        getPokemon(pokemonSearch.toLowerCase());
         // clear old content
         characterContainerEl.textContent = '';
         nameInputEl.value = '';
