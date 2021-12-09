@@ -145,6 +145,28 @@
     gap: 25px;
   }
 
+  .btn-danger {
+    box-shadow: 3px 3px darkred;
+  }
+
+  .btn-success:hover {
+    color: var(--primary);
+    background-color: var(--tertiary);
+    transform: translate(0, 0);
+    box-shadow: 2px 2px rgb(0, 85, 0);
+  }
+
+  .btn-danger:hover {
+    color: var(--primary);
+    background-color: var(--tertiary);
+    transform: translate(0, 0);
+    box-shadow: 2px 2px rgb(119, 4, 4);
+  }
+
+  .btn-success {
+    box-shadow: 3px 3px darkgreen;
+  }
+
   #go-back {
     height: 40px !important;
     width: 740px !important;
@@ -368,6 +390,10 @@
       width: 100px !important;
       margin: auto;
       margin-top: -15px !important;
+    }
+
+    .btn-danger {
+      box-shadow: 3px 3px darkred;
     }
 
     .poke-info-card {
