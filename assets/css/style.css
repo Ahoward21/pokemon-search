@@ -80,8 +80,7 @@
   }
   
   #card-img {
-    border:  5px solid blue;
-    
+    border:  5px solid rgba(0, 0, 255, 0.616);
   }
 
   /* #character-form {
@@ -324,7 +323,7 @@
   }
   
   /* col-sm */
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 480px) {
 
     #card-img {
       width: 200px;
@@ -340,6 +339,29 @@
       width: 100px !important;
       margin: auto;
       margin-top: -15px !important;
+    }
+
+    .poke-info-card {
+      justify-content: space-evenly;
+    }
+
+    #trading-card-container {
+      justify-content: center;
+      align-items: center;
+    }
+
+    #save-card {
+      height: 60px;
+      width: 60px;
+    }
+
+    #view-saved-cards {
+      height: 80px;
+      width: 65px;
+    }
+
+    .hero p {
+      font-size: 20px;
     }
 
     .col-sm-1 {
@@ -393,7 +415,13 @@
   
   
   /* col-md */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1030px) {
+
+    .poke-info-card {
+      justify-content: center;
+      padding-left: 50px;
+    }
+
     .col-md-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
@@ -544,8 +572,21 @@
       flex: 0 0 100%;
     }
   }
+
+  @media screen and (max-width: 1436px) {
+    #card-img {
+      justify-content: center;
+    }
+
+    .pokeball-search {
+      justify-content: center;
+    }
   
-  
+    .search-btn-shape {
+      justify-content: center;
+    }
+  }
+
   #trading-card-container {
     display: flex;
     flex: wrap;

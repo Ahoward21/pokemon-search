@@ -19,7 +19,7 @@ var formSubmitHandler = function (event) {
     pokemonSearch = nameInputEl.value.trim();
     if (pokemonSearch) {
         tradingCard.innerHTML = "";
-        getPokemon(pokemonSearch);
+        getPokemon(pokemonSearch.toLowerCase());
         // clear old content
         characterContainerEl.textContent = '';
         nameInputEl.value = '';
@@ -92,6 +92,8 @@ var displayCard = function (cardImg) {
     console.log("card img", cardImg[0].images.large)
     // }
     var pokeCardImg = document.createElement('img');
+        pokeCardImg.setAttribute("id", "card-img");
+        pokeCardImg.setAttribute("class", "shadow-lg");
     pokeCardImg.src = (cardImg[0].images.large);
     tradingCard.appendChild(pokeCardImg);
 
