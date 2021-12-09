@@ -464,7 +464,7 @@
   } */
   
   /* col-md */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1030px) {
 
     /* .poke-info-card {
       justify-content: center;
