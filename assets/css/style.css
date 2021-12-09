@@ -218,8 +218,10 @@
   }
   
   .list-group {
-    padding: 0;
+    padding: 10px;
     list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
   }
   
   /* CARDS */
@@ -441,6 +443,12 @@
 
     .hero p {
       font-size: 20px;
+    }
+
+    .list-group {
+      font-size: 14px;
+      min-width: 145px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .col-sm-1 {
