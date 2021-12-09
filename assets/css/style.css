@@ -171,6 +171,17 @@
     margin-bottom: 25px;
     /* rgb(43, 43, 231) */
   }
+
+  .hero h3 {
+    max-width: 522px;
+    padding-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(37, 37, 37);
+    background-color: rgba(228, 214, 152, 0.664);
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
   
   .app-title {
     font-size: 3rem;
