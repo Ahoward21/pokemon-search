@@ -136,6 +136,24 @@
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--dark);
   }
+
+  .btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 25px;
+  }
+
+  #go-back {
+    height: 40px !important;
+    width: 740px !important;
+  }
+
+  #clear-deck {
+    height: 40px !important;
+    width: 740px !important;
+  }
   
   .hero {
     padding: 3% 4%;
@@ -360,6 +378,30 @@
       width: 65px;
     }
 
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+    .app-title {
+      font-size: 45px;
+    }
+
+    .app-title p {
+      font-size: 15px;
+    }
+
+    #go-back {
+      height: 40px;
+      width: 200px;
+    }
+
+    #clear-deck {
+      height: 40px;
+      width: 200px;
+    }
+
     .hero p {
       font-size: 20px;
     }
@@ -413,14 +455,33 @@
     }
   }
   
+  /* @media screen and (max-width: 570px) {
+    .poke-info-card {
+      display: flex;
+      justify-content: center;
+      gap: 0px;
+    }
+  } */
   
   /* col-md */
   @media screen and (max-width: 1030px) {
 
-    .poke-info-card {
+    /* .poke-info-card {
       justify-content: center;
       padding-left: 50px;
     }
+
+    .poke-info-card {
+      justify-content: space-evenly;
+    }
+
+    #card-img {
+      max-width: 75%;
+    } */
+
+    /* .card-spacing {
+      margin-right: 50px !important;
+    } */
 
     .col-md-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
@@ -470,9 +531,31 @@
       flex: 0 0 100%;
     }
   }
+
+
   
   /* col-lg */
   @media screen and (max-width: 992px) {
+
+    #go-back {
+      height: 40px;
+      width: 200px;
+    }
+
+    #clear-deck {
+      height: 40px;
+      width: 200px;
+    }
+
+    /* .card-spacing {
+      margin-right: 100px;
+    } */
+
+    /* .poke-info-card {
+      justify-content: space-around !important;
+      gap: 50px !important;
+    } */
+
     .col-lg-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
