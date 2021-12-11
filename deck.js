@@ -8,7 +8,7 @@ for (let i = 0; i < existingPokemon.length; i++) {
     const pokemon = existingPokemon[i];
     const container = document.querySelector("#trading-card-container");
     const image = document.createElement("img");
-        image.setAttribute("id", "card-img");
+        image.setAttribute("id", "card-deck-img");
     image.src = pokemon.imageUrl
     container.appendChild(image)
     
