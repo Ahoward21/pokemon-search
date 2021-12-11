@@ -26,9 +26,10 @@ var formSubmitHandler = function (event) {
         characterContainerEl.textContent = '';
         nameInputEl.value = '';
     } else {
-        // alert('Please enter pokemon'); 
-    }
-};
+        var modalBtn = $("#modalBtn");
+        modalBtn.trigger("click");
+        document.querySelector("#modalMessage").textContent = "Please Fill in the Search Box!";
+}};
 ///// ---------------------------------------------------------------
 var getPokemon = function (pokemon) {
     var pokeApiUrl = 'https://pokeapi.co/api/v2/pokemon/' + pokemon + "/";
@@ -43,11 +44,13 @@ var getPokemon = function (pokemon) {
                     
                 });
             } else {
-                alert('Error: ' + response.statusText);
+                var modalBtn = $("#modalBtn");
+                modalBtn.trigger("click");
+                document.querySelector("#modalMessage").textContent = "Please Enter the Correct Spelling!";
             }
         })
         .catch(function (error) {
-            console.log('Unable to connect to to pokemon');
+            console.log('Unable to connect to pokemon');
         });
 };
 var displayPokemon = function (poke, searchTerm) {
