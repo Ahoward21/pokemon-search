@@ -130,11 +130,6 @@ viewDeck.addEventListener("click", function () {
     window.location.replace("./deck.html");
 });
 
-var myModalEl = document.getElementById('myModal')
-myModalEl.addEventListener('shown.bs.modal', function (event) {
-  
-})
-
  
 // add event listeners to forms
 userFormEl.addEventListener('submit', formSubmitHandler);
