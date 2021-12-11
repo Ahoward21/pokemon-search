@@ -11,6 +11,8 @@ var pokemonName
 var gameCard
 var saveButton = document.querySelector('#save-card');
 var viewDeck = document.querySelector('#view-saved-cards');
+
+
 /// -------------
 var formSubmitHandler = function (event) {
     // prevent page from refreshing
@@ -124,6 +126,11 @@ var saveButton = function (pokemonInfo) {
 viewDeck.addEventListener("click", function () {
     window.location.replace("./deck.html");
 });
+
+var myModalEl = document.getElementById('myModal')
+myModalEl.addEventListener('shown.bs.modal', function (event) {
+  
+})
 
  
 // add event listeners to forms
