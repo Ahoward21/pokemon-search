@@ -11,6 +11,8 @@ var pokemonName
 var gameCard
 var saveButton = document.querySelector('#save-card');
 var viewDeck = document.querySelector('#view-saved-cards');
+
+
 /// -------------
 var formSubmitHandler = function (event) {
     // prevent page from refreshing
