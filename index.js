@@ -12,8 +12,6 @@ var gameCard
 var saveButton = document.querySelector('#save-card');
 var viewDeck = document.querySelector('#view-saved-cards');
 
-
-/// -------------
 var formSubmitHandler = function (event) {
     // prevent page from refreshing
     event.preventDefault();
@@ -30,7 +28,7 @@ var formSubmitHandler = function (event) {
         modalBtn.trigger("click");
         document.querySelector("#modalMessage").textContent = "Please Fill in the Search Box!";
 }};
-///// ---------------------------------------------------------------
+
 var getPokemon = function (pokemon) {
     var pokeApiUrl = 'https://pokeapi.co/api/v2/pokemon/' + pokemon + "/";
     fetch(pokeApiUrl)
@@ -64,7 +62,8 @@ var displayPokemon = function (poke, searchTerm) {
     }
     pokeCard()
 }
-//// -------------------------------------------------------------
+
+// This is the fetch call to the pokemon trading card game API
 var pokeCard = function (cards) {
     var cardApi = 'https://api.pokemontcg.io/v2/cards?q=name:' + pokemonSearch;
     fetch(cardApi)
@@ -93,9 +92,9 @@ var pokeCard = function (cards) {
 let pokemonInfo;
 
 var displayCard = function (cardImg) {
-    //for (var i = 0; i < cardImg.length; i++) {
+    
     console.log("card img", cardImg[0].images.large)
-    // }
+    
     var pokeCardImg = document.createElement('img');
         pokeCardImg.setAttribute("id", "card-img");
         pokeCardImg.setAttribute("class", "shadow-lg");
@@ -109,9 +108,6 @@ var displayCard = function (cardImg) {
     }
 
     console.log(cardImg[0])
-
-    /// create a href for link to image
-    ///
 }
 
 var saveButton = function (pokemonInfo) {
