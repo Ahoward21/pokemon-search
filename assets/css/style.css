@@ -89,6 +89,7 @@
   #card-deck-img {
     border:  5px solid rgba(0, 0, 255, 0.616);
     height: 835px;
+    width: 610px;
   }
 
   .card-spacing h2 {
@@ -300,7 +301,7 @@
   .justify-space-around {
     justify-content: space-around;
   }
-  
+
   .col-8 {
     flex: 0 0 calc(100% * 8 / 12 - 2%);
   }
