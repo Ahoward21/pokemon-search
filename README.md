@@ -24,7 +24,7 @@ https://ahoward21.github.io/pokemon-search/
 ### View Deck Page
 ![veiw deck page screen shot](assets/images/poke-find-deck.png?raw=true)
 
-####Contributors
+#### Contributors
 Adam H
 Nick P
 Kamyar A
