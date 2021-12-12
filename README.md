@@ -17,5 +17,9 @@ Used Two Server Side APIs
 ## Find Your Pokemon now!
 https://ahoward21.github.io/pokemon-search/
 
+
+### Landing/Search Page
 ![home page screen shot](assets/images/poke-find-home.png?raw=true)
+
+### View Deck Page
 ![veiw deck page screen shot](assets/images/poke-find-deck.png?raw=true)
