@@ -53,7 +53,7 @@ var getPokemon = function (pokemon) {
 };
 var displayPokemon = function (poke, searchTerm) {
     var pokemonName = document.createElement('span');
-    pokemonName.textContent = (searchTerm)
+    pokemonName.textContent = (searchTerm.toUpperCase());
     characterContainerEl.appendChild(pokemonName)
     for (var i = 0; i < poke.stats.length; i++) {
         var statsEl = document.createElement('div');
